@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/LLMCoordination.Api/LLMCoordination.Api.csproj" />
+    <Project Path="src/LLMCoordination.Application/LLMCoordination.Application.csproj" />
+    <Project Path="src/LLMCoordination.Domain/LLMCoordination.Domain.csproj" />
+    <Project Path="src/LLMCoordination.Infrastructure/LLMCoordination.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/LLMCoordination.Tests/LLMCoordination.Tests.csproj" />
+  </Folder>
+</Solution>

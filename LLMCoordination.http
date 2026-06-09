@@ -1,0 +1,36 @@
+@baseUrl = http://localhost:5267
+
+### Health
+GET {{baseUrl}}/api/health
+
+### Login
+# @name login
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@demo.local",
+  "password": "Demo123!"
+}
+
+### Tenant Me
+GET {{baseUrl}}/api/tenant/me
+Authorization: Bearer {{login.response.body.token}}
+
+### Chat - Patient List
+POST {{baseUrl}}/api/chat/message
+Authorization: Bearer {{login.response.body.token}}
+Content-Type: application/json
+
+{
+  "message": "Give me the list of patients in card view",
+  "viewPreference": "card"
+}
+
+### List Skills
+GET {{baseUrl}}/api/skills
+Authorization: Bearer {{login.response.body.token}}
+
+### Audit Logs
+GET {{baseUrl}}/api/audit/logs
+Authorization: Bearer {{login.response.body.token}}
