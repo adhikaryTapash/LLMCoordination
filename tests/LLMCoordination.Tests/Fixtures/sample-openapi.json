@@ -1,0 +1,25 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Healthcare API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/patients": {
+      "get": {
+        "operationId": "listPatients",
+        "summary": "List patients"
+      },
+      "post": {
+        "operationId": "createPatient",
+        "summary": "Create patient"
+      }
+    },
+    "/api/patients/{id}": {
+      "get": {
+        "operationId": "getPatient",
+        "summary": "Get patient by id"
+      }
+    }
+  }
+}
